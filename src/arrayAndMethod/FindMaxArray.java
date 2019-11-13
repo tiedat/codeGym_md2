@@ -1,0 +1,42 @@
+package arrayAndMethod;
+
+import java.util.Scanner;
+
+public class FindMaxArray {
+    public static void main(String[] args) {
+        int size;
+        int[] array;
+        Scanner scanner = new Scanner(System.in);
+
+
+        do {
+            System.out.print("Enter size of array: ");
+            size = scanner.nextInt();
+            if (size > 20)
+                System.out.println("Size should not exceed 20");
+        } while (size > 20);
+
+        array = new int[size];
+        int i = 0;
+        while (i < array.length) {
+            array[i] = (int) Math.floor(Math.random()*101);
+            i++;
+        }
+
+        System.out.print("Property list: ");
+        for (int value : array) {
+            System.out.print(value + "\t");
+        }
+        System.out.println();
+
+        int max = Integer.MIN_VALUE;
+        int index = 1;
+        for (int j = 0; j < array.length; j++) {
+            if (array[j] > max) {
+                max = array[j];
+                index = j + 1;
+            }
+        }
+        System.out.printf("The largest value in the list is %d at position %d", max, index);
+    }
+}
