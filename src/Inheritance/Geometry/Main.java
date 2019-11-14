@@ -2,6 +2,9 @@ package Inheritance.Geometry;
 
 import arrayAndMethod.IllegalTriangleException.IllegalTriangleException;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -38,6 +41,35 @@ public class Main {
         square = new Square("yellow", true, 5.8);
         System.out.println(square);
 
+        System.out.println();
 
+        ComparableCircle[] circles = new ComparableCircle[5];
+        circles[0] = new ComparableCircle(3.6);
+        circles[1] = new ComparableCircle();
+        circles[2] = new ComparableCircle("indigo", false, 3.5);
+        circles[3] = new ComparableCircle(3.6);
+        circles[4] = new ComparableCircle(3.7);
+
+        System.out.println("Pre-sorted:");
+        for (ComparableCircle c : circles) {
+            System.out.println(c);
+        }
+
+//        System.out.println(" \n use compareTo() method");
+//        Arrays.sort(circles); // su dung sort bang phuong thuc compareTo()
+//
+//        System.out.println("After-sorted:");
+//        for (ComparableCircle c : circles) {
+//            System.out.println(c);
+//        }
+
+        System.out.println(" \n use compare() method");
+        Comparator circleComparator = new CircleComparator();
+        Arrays.sort(circles, circleComparator); // su dung sort bang phuong thuc compare()
+
+        System.out.println("After-sorted:");
+        for (Circle c : circles) {
+            System.out.println(c);
+        }
     }
 }
