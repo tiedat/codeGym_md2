@@ -1,16 +1,16 @@
-package Inheritance.Geometry.Shape;
+package Inheritance.Geometry;
 
 public class Shape {
 
     private String color;
     private boolean filled;
 
-    public Shape() {
+    Shape() {
         this.color = "green";
         this.filled = true;
     }
 
-    public Shape(String color, boolean filled) {
+    Shape(String color, boolean filled) {
         this.color = color;
         this.filled = filled;
     }
@@ -33,9 +33,9 @@ public class Shape {
 
     @Override
     public String toString() {
-        if (this.filled) {
-            return "A Shape with color of " + this.color + " and filled";
-        }
-        return "A Shape with color of " + this.color + " and not filled";
+        return "A Shape with color of "
+                + getColor()
+                + " and "
+                + (isFilled() ? "filled" : "not filled");
     }
 }
