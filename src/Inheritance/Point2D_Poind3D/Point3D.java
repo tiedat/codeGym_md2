@@ -28,11 +28,7 @@ public class Point3D extends Point2D {
     }
 
     public float[] getXYZ() {
-        float[] getXY = super.getXY();
-        float[] arr = new float[3];
-        System.arraycopy(getXY, 0, arr, 0, getXY.length);
-        arr[2] = this.z;
-        return arr;
+        return new float[]{super.getX(),super.getY(),this.z};
     }
 
     @Override

@@ -13,7 +13,13 @@ public class Main {
         Point3D point3D1 = new Point3D(2,3,4);
         System.out.println(point3D1.getZ());
         System.out.println(point3D1.toString());
-        System.out.println(point3D.toString());
+        System.out.println(point3D.toString()+"\n");
+
+        MoveablePoint moveablePoint = new MoveablePoint(3,5);
+        System.out.println(moveablePoint.toString());
+        moveablePoint.setSpeed(5,3);
+        moveablePoint.move();
+        System.out.println((moveablePoint.toString()));
 
     }
 }
