@@ -15,9 +15,7 @@ public class Triangle extends Shape {
         boolean check2 = side1 + side3 > side2;
         boolean check3 = side3 + side2 > side1;
 
-        if (side1 < 0 || side2 < 0 || side3 < 0) {
-            throw new IllegalTriangleException("Triangle Sides length is NOT positive float");
-        } else if (!check1 || !check2 || !check3) {
+        if (!check1 || !check2 || !check3) {
             throw new IllegalTriangleException("This is NOT Triangle");
         }
     }
