@@ -1,6 +1,6 @@
 package Inheritance.Geometry;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements IResizeable {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -50,5 +50,11 @@ public class Rectangle extends Shape {
                 + this.getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        setLength(length * percent);
+        setWidth(width * percent);
     }
 }

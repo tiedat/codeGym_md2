@@ -1,6 +1,6 @@
 package Inheritance.Geometry;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements IResizeable {
 
     private double radius = 1.0;
 
@@ -36,5 +36,10 @@ public class Circle extends Shape {
     public String toString() {
         return "A Circle with radius " + this.getRadius() +
                 ", which is a subclass of " + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        setRadius(radius * percent);
     }
 }
