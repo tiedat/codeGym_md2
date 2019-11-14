@@ -19,7 +19,7 @@ public class Rectangle extends Shape {
     }
 
     public double getWidth() {
-        return width;
+        return this.width;
     }
 
     public void setWidth(double width) {
@@ -27,7 +27,7 @@ public class Rectangle extends Shape {
     }
 
     public double getLength() {
-        return length;
+        return this.length;
     }
 
     public void setLength(double length) {
@@ -35,19 +35,19 @@ public class Rectangle extends Shape {
     }
 
     public double getArea() {
-        return width * this.length;
+        return this.width * this.length;
     }
 
     public double getPerimeter() {
-        return 2 * (width + this.length);
+        return 2 * (this.width + this.length);
     }
 
     @Override
     public String toString() {
         return "A Rectangle with width="
-                + getWidth()
+                + this.getWidth()
                 + " and length="
-                + getLength()
+                + this.getLength()
                 + ", which is a subclass of "
                 + super.toString();
     }

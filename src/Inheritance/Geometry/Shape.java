@@ -34,8 +34,8 @@ public class Shape {
     @Override
     public String toString() {
         return "A Shape with color of "
-                + getColor()
+                + this.getColor()
                 + " and "
-                + (isFilled() ? "filled" : "not filled");
+                + (this.isFilled() ? "filled" : "not filled");
     }
 }

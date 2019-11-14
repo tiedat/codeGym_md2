@@ -6,7 +6,7 @@ public class Square extends Rectangle {
     }
 
     public Square(double side) {
-        super(side,side);
+        super(side, side);
     }
 
     public Square(String color, boolean filled, double side) {
@@ -35,7 +35,7 @@ public class Square extends Rectangle {
     @Override
     public String toString() {
         return "A Square with side="
-                + getSide()
+                + this.getSide()
                 + ", which is a subclass of "
                 + super.toString();
     }

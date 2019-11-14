@@ -2,10 +2,9 @@ package Inheritance.Geometry;
 
 public class Circle extends Shape {
 
-    private double radius;
+    private double radius = 1.0;
 
     Circle() {
-        this.radius = 1.0;
     }
 
     Circle(double radius) {
@@ -26,16 +25,16 @@ public class Circle extends Shape {
     }
 
     public double getArea() {
-        return radius * radius * Math.PI;
+        return this.radius * this.radius * Math.PI;
     }
 
     public double getPerimeter() {
-        return 2 * radius * Math.PI;
+        return 2 * this.radius * Math.PI;
     }
 
     @Override
     public String toString() {
-        return "A Circle with radius " + getRadius() +
+        return "A Circle with radius " + this.getRadius() +
                 ", which is a subclass of " + super.toString();
     }
 }
