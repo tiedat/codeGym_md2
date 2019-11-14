@@ -1,5 +1,7 @@
 package Inheritance.Geometry;
 
+import arrayAndMethod.IllegalTriangleException.IllegalTriangleException;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -35,5 +37,7 @@ public class Main {
 
         square = new Square("yellow", true, 5.8);
         System.out.println(square);
+
+
     }
 }

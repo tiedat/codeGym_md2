@@ -1,7 +1,7 @@
 package arrayAndMethod.IllegalTriangleException;
 
-class IllegalTriangleException extends Exception {
-    IllegalTriangleException(String message) {
+public class IllegalTriangleException extends Exception {
+    public IllegalTriangleException(String message) {
         super(message);
     }
 
