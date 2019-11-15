@@ -1,6 +1,6 @@
 package Inheritance.Geometry;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements IColorable{
 
     public Square() {
     }
@@ -43,5 +43,10 @@ public class Square extends Rectangle {
     @Override
     public void resize(double percent) {
         setSide(getSide() * percent);
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("color all four sides ");
     }
 }
