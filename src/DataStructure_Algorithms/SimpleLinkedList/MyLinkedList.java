@@ -1,4 +1,4 @@
-package SimpleLinkedList;
+package DataStructure_Algorithms.SimpleLinkedList;
 
 public class MyLinkedList {
 

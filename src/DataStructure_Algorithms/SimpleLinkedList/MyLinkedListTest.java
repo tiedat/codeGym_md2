@@ -1,4 +1,4 @@
-package SimpleLinkedList;
+package DataStructure_Algorithms.SimpleLinkedList;
 
 public class MyLinkedListTest {
     public static void main(String[] args) {
@@ -11,5 +11,6 @@ public class MyLinkedListTest {
         ll.add(4, 9);
         ll.add(4, 9);
         ll.printList();
+
     }
 }
